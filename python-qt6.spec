@@ -20,8 +20,7 @@ Patch0:		PyQt6-qt-6.4.0.patch
 BuildRequires:	python-sip >= 5.1.0
 BuildRequires:	python-sip-qt5
 BuildRequires:	python-qt-builder
-BuildRequires:	qmake5
-BuildRequires:	qt5-qtbase-macros
+BuildRequires:	qmake-qt6
 BuildRequires:	glibc-devel
 BuildRequires:	sed
 BuildRequires:	pkgconfig(dbus-python)
