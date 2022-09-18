@@ -21,6 +21,7 @@ BuildRequires:	python-sip >= 5.1.0
 BuildRequires:	python-sip-qt5
 BuildRequires:	python-qt-builder
 BuildRequires:	qmake-qt6
+BuildRequires:	qt6-cmake
 BuildRequires:	glibc-devel
 BuildRequires:	sed
 BuildRequires:	pkgconfig(dbus-python)
