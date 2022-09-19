@@ -505,6 +505,17 @@ PyQt 6 sensor interfaces
 %autosetup -n PyQt6-%{version} -p1
 export QTDIR=%{_qtdir}
 export PATH=%{_qtdir}/bin:$PATH
+
+# FIXME just to see why QtQuick3D isn't detected in abf
+cat >test.cpp <<'EOF'
+#include <qquick3d.h>
+
+int main(int argc, char **argv) {
+        QQuick3D::idealSurfaceFormat();
+}
+EOF
+clang++ test.cpp -I%{_qtdir}/include/QtQuick3D -I%{_qtdir}/include -std=c++20 -L%{_qtdir}/lib -lQt6Quick3D -lQt6Gui
+
 sip-build \
 	--no-make \
 	--confirm-license \
