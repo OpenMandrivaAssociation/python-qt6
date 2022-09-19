@@ -60,6 +60,7 @@ BuildRequires:	cmake(Qt6Help)
 BuildRequires:	cmake(Qt6SerialPort)
 BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6SvgWidgets)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6WebChannel)
 BuildRequires:	cmake(Qt6WebEngineWidgets)
@@ -332,6 +333,19 @@ PyQt 6 svg.
 
 %files svg
 %{py_platsitedir}/PyQt6/QtSvg.abi3.so
+
+#------------------------------------------------------------
+
+%package svg-widgets
+Summary:	PyQt 6 SVG widgets
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description svg-widgets
+PyQt 6 SVG widgets
+
+%files svg-widgets
+%{py_platsitedir}/PyQt6/QtSvgWidgets.abi3.so
 
 #------------------------------------------------------------
 
