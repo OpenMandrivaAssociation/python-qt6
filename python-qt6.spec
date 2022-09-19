@@ -415,7 +415,7 @@ PyQt 6 xml.
 Summary:	PyQt 6 devel
 Group:		Development/KDE and Qt
 Requires:	%{name} = %{EVRD}
-Requires:	qt6-designer
+Suggests:	qt6-qttools-designer
 
 %description devel
 PyQt 6 devel utilities.
