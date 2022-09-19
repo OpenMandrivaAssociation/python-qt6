@@ -51,6 +51,10 @@ BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	cmake(Qt6WebSockets)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Xml)
+BuildRequires:	pkgconfig(GL)
+BuildRequires:	pkgconfig(GLESv2)
+BuildRequires:	pkgconfig(EGL)
+BuildRequires:	pkgconfig(fontconfig)
 Requires:	%{name}-core = %{EVRD}
 Requires:	%{name}-dbus = %{EVRD}
 Requires:	%{name}-bluetooth = %{EVRD}
