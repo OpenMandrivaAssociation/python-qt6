@@ -415,6 +415,70 @@ PyQt 6 devel utilities.
 
 #------------------------------------------------------------
 
+%package help
+Summary:	PyQt 6 Help module
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description help
+PyQt 6 Help module
+
+%files help
+%{py_platsitedir}/PyQt6/QtHelp.abi3.so
+
+#------------------------------------------------------------
+
+%package multimedia-widgets
+Summary:	PyQt 6 multimedia widgets
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+Requires:	%{name}-multimedia = %{EVRD}
+
+%description multimedia-widgets
+PyQt 6 multimedia widgets
+
+%files multimedia-widgets
+%{py_platsitedir}/PyQt6/QtMultimediaWidgets.abi3.so
+
+#------------------------------------------------------------
+
+%package nfc
+Summary:	PyQt 6 NFC
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description nfc
+PyQt 6 NFC
+
+%files nfc
+%{py_platsitedir}/PyQt6/QtNfc.abi3.so
+
+#------------------------------------------------------------
+
+%package remoteobjects
+Summary:	PyQt 6 Remote Objects
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description remoteobjects
+PyQt 6 Remote Objects
+
+%files remoteobjects
+%{py_platsitedir}/PyQt6/QtRemoteObjects.abi3.so
+
+#------------------------------------------------------------
+
+%package sensors
+Summary:	PyQt 6 sensor interfaces
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description sensors
+PyQt 6 sensor interfaces
+
+%files sensors
+%{py_platsitedir}/PyQt6/QtSensors.abi3.so
+
 %prep
 %autosetup -n PyQt6-%{version} -p1
 export QTDIR=%{_qtdir}
