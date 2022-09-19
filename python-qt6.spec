@@ -18,7 +18,7 @@ Patch0:		PyQt6-qt-6.4.0.patch
 #Patch1:		PyQt6-Timeline.patch
 
 BuildRequires:	python-sip >= 5.1.0
-BuildRequires:	python-sip-qt5
+BuildRequires:	python-sip-qt6
 BuildRequires:	python-qt-builder
 BuildRequires:	qmake-qt6
 BuildRequires:	qt6-cmake
@@ -123,7 +123,7 @@ PyQt is a set of Python bindings for Trolltech's Qt application framework.
 %package core
 Summary:	PyQt 6 core
 Group:		Development/KDE and Qt
-Requires:	python-sip-qt5
+Requires:	python-sip-qt6
 
 %description core
 PyQt 6 core.
