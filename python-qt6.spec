@@ -88,7 +88,6 @@ Requires:	%{name}-dbus = %{EVRD}
 Requires:	%{name}-bluetooth = %{EVRD}
 Requires:	%{name}-designer = %{EVRD}
 Requires:	%{name}-gui = %{EVRD}
-Requires:	%{name}-location = %{EVRD}
 Requires:	%{name}-multimedia = %{EVRD}
 Requires:	%{name}-multimediawidgets = %{EVRD}
 Requires:	%{name}-network = %{EVRD}
@@ -105,13 +104,9 @@ Requires:	%{name}-sql = %{EVRD}
 Requires:	%{name}-svg = %{EVRD}
 Requires:	%{name}-test = %{EVRD}
 Requires:	%{name}-webchannel = %{version}
-Requires:	%{name}-webkit = %{EVRD}
-Requires:	%{name}-webkitwidgets = %{EVRD}
 Requires:	%{name}-websockets = %{EVRD}
 Requires:	%{name}-widgets = %{EVRD}
 Requires:	%{name}-xml = %{EVRD}
-Requires:	%{name}-xmlpatterns = %{EVRD}
-Requires:	%{name}-x11extras = %{EVRD}
 Provides:	PyQt6 = %{EVRD}
 
 %description
@@ -451,16 +446,16 @@ PyQt 6 Help module
 
 #------------------------------------------------------------
 
-%package multimedia-widgets
+%package multimediawidgets
 Summary:	PyQt 6 multimedia widgets
 Group:		Development/KDE and Qt
 Requires:	%{name}-core = %{EVRD}
 Requires:	%{name}-multimedia = %{EVRD}
 
-%description multimedia-widgets
+%description multimediawidgets
 PyQt 6 multimedia widgets
 
-%files multimedia-widgets
+%files multimediawidgets
 %{py_platsitedir}/PyQt6/QtMultimediaWidgets.abi3.so
 
 #------------------------------------------------------------
@@ -506,24 +501,6 @@ PyQt 6 sensor interfaces
 %autosetup -n PyQt6-%{version} -p1
 export QTDIR=%{_qtdir}
 export PATH=%{_qtdir}/bin:$PATH
-
-# FIXME just to see why QtQuick3D isn't detected in abf
-cat >test.cpp <<'EOF'
-#include <qquick3d.h>
-
-int main(int argc, char **argv) {
-        QQuick3D::idealSurfaceFormat();
-}
-EOF
-cat >test.pro <<'EOF'
-CONFIG += release
-TARGET = test
-QT = quick3d
-SOURCES = test.cpp
-EOF
-qmake test.pro
-make
-
 sip-build \
 	--no-make \
 	--confirm-license \
