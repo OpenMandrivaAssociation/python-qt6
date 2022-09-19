@@ -27,6 +27,7 @@ BuildRequires:	sed
 BuildRequires:	pkgconfig(dbus-python)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	cmake(Qt6Bluetooth)
+BuildRequires:	cmake(Qt6Concurrent)
 BuildRequires:	cmake(Qt6Nfc)
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6DBus)
@@ -514,7 +515,14 @@ int main(int argc, char **argv) {
         QQuick3D::idealSurfaceFormat();
 }
 EOF
-clang++ test.cpp -I%{_qtdir}/include/QtQuick3D -I%{_qtdir}/include -std=c++20 -L%{_qtdir}/lib -lQt6Quick3D -lQt6Gui
+cat >test.pro <<'EOF'
+CONFIG += release
+TARGET = test
+QT = quick3d
+SOURCES = test.cpp
+EOF
+qmake test.pro
+make
 
 sip-build \
 	--no-make \
