@@ -39,6 +39,8 @@ BuildRequires:	cmake(Qt6MultimediaWidgets)
 BuildRequires:	cmake(Qt6Network)
 BuildRequires:	cmake(Qt6OpenGL)
 BuildRequires:	cmake(Qt6OpenGLWidgets)
+BuildRequires:	cmake(Qt6Pdf)
+BuildRequires:	cmake(Qt6PdfWidgets)
 BuildRequires:	cmake(Qt6Positioning)
 BuildRequires:	cmake(Qt6PrintSupport)
 BuildRequires:	cmake(Qt6RemoteObjects)
@@ -470,6 +472,20 @@ PyQt 6 NFC
 
 %files nfc
 %{py_platsitedir}/PyQt6/QtNfc.abi3.so
+
+#------------------------------------------------------------
+
+%package pdf
+Summary:	PyQt 6 PDF
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description pdf
+PyQt 6 PDF
+
+%files pdf
+%{py_platsitedir}/PyQt6/QtPdf.abi3.so
+%{py_platsitedir}/PyQt6/QtPdfWidgets.abi3.so
 
 #------------------------------------------------------------
 
