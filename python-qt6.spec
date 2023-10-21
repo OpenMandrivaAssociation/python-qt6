@@ -12,10 +12,7 @@ License:	GPLv2+
 Group:		Development/KDE and Qt
 Url:		http://www.riverbankcomputing.co.uk/software/pyqt/intro
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt6/PyQt6-%{version}.tar.gz
-#Patch0:		PyQt6-qt-6.4.0.patch
-#Patch1:		PyQt6_gpl-5.6-dbus_ftbfs.patch
-# support newer Qt5 releases than 5.9.3/5.10.0
-#Patch1:		PyQt6-Timeline.patch
+Patch0:		PyQt6-qt-6.5.3.patch
 
 BuildRequires:	python-sip >= 5.1.0
 BuildRequires:	python-sip-qt6
