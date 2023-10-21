@@ -517,7 +517,10 @@ export PATH=%{_qtdir}/bin:$PATH
 sip-build \
 	--no-make \
 	--confirm-license \
-	--dbus %{_includedir}/dbus-1.0
+	--dbus %{_includedir}/dbus-1.0 \
+	--qmake-setting 'QMAKE_CFLAGS_RELEASE="%{optflags}"' \
+	--qmake-setting 'QMAKE_CXXFLAGS_RELEASE="%{optflags} -DQT_NO_INT128"' \
+	--qmake-setting 'QMAKE_LFLAGS_RELEASE="%{ldflags}"'
 find . -name Makefile |xargs sed -i -e 's,-L/usr/lib64,,g;s,-L/usr/lib,,g;s,-flto,-fno-lto,g'
 
 %build
