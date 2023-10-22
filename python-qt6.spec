@@ -320,19 +320,6 @@ PyQt 6 Spatial Audio module
 
 #------------------------------------------------------------
 
-%package spatialaudio
-Summary:	PyQt 6 spatialaudio
-Group:		Development/KDE and Qt
-Requires:	%{name}-core = %{EVRD}
-
-%description spatialaudio
-PyQt 6 spatialaudio.
-
-%files spatialaudio
-%{py_platsitedir}/PyQt6/QtSpatialAudio.abi3.so
-
-#------------------------------------------------------------
-
 %package sql
 Summary:	PyQt 6 sql
 Group:		Development/KDE and Qt
@@ -391,19 +378,6 @@ Requires:	%{name}-core = %{EVRD}
 
 %description texttospeech
 PyQt 6 Text-to-Speech module
-
-%files texttospeech
-%{py_platsitedir}/PyQt6/QtTextToSpeech.abi3.so
-
-#------------------------------------------------------------
-
-%package texttospeech
-Summary:	PyQt 6 texttospeech
-Group:		Development/KDE and Qt
-Requires:	%{name}-core = %{EVRD}
-
-%description texttospeech
-PyQt 6 texttospeech.
 
 %files texttospeech
 %{py_platsitedir}/PyQt6/QtTextToSpeech.abi3.so
