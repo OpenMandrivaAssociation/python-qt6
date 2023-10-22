@@ -13,6 +13,7 @@ Group:		Development/KDE and Qt
 Url:		http://www.riverbankcomputing.co.uk/software/pyqt/intro
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt6/PyQt6-%{version}.tar.gz
 Patch0:		PyQt6-qt-6.5.3.patch
+Patch1:		pyqt6-workaround-qttest-detection.patch
 
 BuildRequires:	python-sip >= 5.1.0
 BuildRequires:	python-sip-qt6
@@ -306,6 +307,18 @@ PyQt 6 serialport.
 %{py_platsitedir}/PyQt6/QtSerialPort.abi3.so
 
 #------------------------------------------------------------
+%package spatialaudio
+Summary:	PyQt 6 Spatial Audio module
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description spatialaudio
+PyQt 6 Spatial Audio module
+
+%files spatialaudio
+%{py_platsitedir}/PyQt6/QtSpatialAudio.abi3.so
+
+#------------------------------------------------------------
 
 %package spatialaudio
 Summary:	PyQt 6 spatialaudio
@@ -369,6 +382,18 @@ PyQt 6 test.
 
 %files test
 %{py_platsitedir}/PyQt6/QtTest.abi3.so
+
+#------------------------------------------------------------
+%package texttospeech
+Summary:	PyQt 6 Text-to-Speech module
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description texttospeech
+PyQt 6 Text-to-Speech module
+
+%files texttospeech
+%{py_platsitedir}/PyQt6/QtTextToSpeech.abi3.so
 
 #------------------------------------------------------------
 
@@ -540,6 +565,7 @@ PyQt 6 sensor interfaces
 
 %prep
 %autosetup -n PyQt6-%{version} -p1
+
 export QTDIR=%{_qtdir}
 export PATH=%{_qtdir}/bin:$PATH
 sip-build \
@@ -551,11 +577,10 @@ sip-build \
 	--qmake-setting 'QMAKE_CXXFLAGS_RELEASE="%{optflags} -DQT_NO_INT128"' \
 	--qmake-setting 'QMAKE_LFLAGS_RELEASE="%{ldflags}"'
 
-find . -name Makefile |xargs sed -i -e 's,-L/usr/lib64,,g;s,-L/usr/lib,,g;s,-flto,-fno-lto,g'
+find . -name Makefile |xargs sed -i -e 's,-L/usr/lib64 , ,g;s,-L/usr/lib , ,g'
 
 %build
 %make_build -C build
-
 
 %install
 %make_install -C build INSTALL_ROOT=%{buildroot}

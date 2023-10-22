@@ -1,0 +1,14 @@
+diff -up PyQt6-6.5.3/project.py.omv~ PyQt6-6.5.3/project.py
+--- PyQt6-6.5.3/project.py.omv~	2023-10-22 02:47:59.551606557 +0200
++++ PyQt6-6.5.3/project.py	2023-10-22 03:10:52.823770554 +0200
+@@ -856,8 +856,8 @@ class QtTest(PyQtBindings):
+     def __init__(self, project):
+         """ Initialise the bindings. """
+ 
+-        super().__init__(project, 'QtTest', qmake_QT=['testlib', 'widgets'],
+-                test_headers=['QtTest'], test_statement='QTest::qSleep(0)')
++        super().__init__(project, 'QtTest', qmake_QT=['widgets'],
++                test_headers=['QtTest'], test_statement='QTest::qSleep(0)', include_dirs = ['/usr/lib64/qt6/include/QtTest'], libraries = ['Qt6Test'], library_dirs = ['/usr/lib64/qt6/lib'])
+ 
+ 
+ class QtTextToSpeech(PyQtBindings):
