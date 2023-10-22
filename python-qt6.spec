@@ -58,10 +58,12 @@ BuildRequires:	cmake(Qt6Quick3DUtils)
 BuildRequires:	cmake(Qt6QuickWidgets)
 BuildRequires:	cmake(Qt6Help)
 BuildRequires:	cmake(Qt6SerialPort)
+BuildRequires:	cmake(Qt6SpatialAudio)
 BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6SvgWidgets)
 BuildRequires:	cmake(Qt6Test)
+BuildRequires:	cmake(Qt6TextToSpeech)
 BuildRequires:	cmake(Qt6WebChannel)
 BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	cmake(Qt6WebSockets)
@@ -305,6 +307,19 @@ PyQt 6 serialport.
 
 #------------------------------------------------------------
 
+%package spatialaudio
+Summary:	PyQt 6 spatialaudio
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description spatialaudio
+PyQt 6 spatialaudio.
+
+%files spatialaudio
+%{py_platsitedir}/PyQt6/QtSpatialAudio.abi3.so
+
+#------------------------------------------------------------
+
 %package sql
 Summary:	PyQt 6 sql
 Group:		Development/KDE and Qt
@@ -354,6 +369,19 @@ PyQt 6 test.
 
 %files test
 %{py_platsitedir}/PyQt6/QtTest.abi3.so
+
+#------------------------------------------------------------
+
+%package texttospeech
+Summary:	PyQt 6 texttospeech
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description texttospeech
+PyQt 6 texttospeech.
+
+%files texttospeech
+%{py_platsitedir}/PyQt6/QtTextToSpeech.abi3.so
 
 #------------------------------------------------------------
 
@@ -517,10 +545,12 @@ export PATH=%{_qtdir}/bin:$PATH
 sip-build \
 	--no-make \
 	--confirm-license \
+	--verbose \
 	--dbus %{_includedir}/dbus-1.0 \
 	--qmake-setting 'QMAKE_CFLAGS_RELEASE="%{optflags}"' \
 	--qmake-setting 'QMAKE_CXXFLAGS_RELEASE="%{optflags} -DQT_NO_INT128"' \
 	--qmake-setting 'QMAKE_LFLAGS_RELEASE="%{ldflags}"'
+
 find . -name Makefile |xargs sed -i -e 's,-L/usr/lib64,,g;s,-L/usr/lib,,g;s,-flto,-fno-lto,g'
 
 %build
