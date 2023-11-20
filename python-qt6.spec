@@ -6,13 +6,12 @@
 
 Summary:	Set of Python bindings for Trolltech's Qt application framework
 Name:		python-qt6
-Version:	6.5.3
+Version:	6.6.0
 Release:	1
 License:	GPLv2+
 Group:		Development/KDE and Qt
 Url:		http://www.riverbankcomputing.co.uk/software/pyqt/intro
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt6/PyQt6-%{version}.tar.gz
-Patch0:		PyQt6-qt-6.5.3.patch
 Patch1:		pyqt6-workaround-qttest-detection.patch
 
 BuildRequires:	python-sip >= 5.1.0
