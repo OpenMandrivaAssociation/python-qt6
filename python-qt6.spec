@@ -6,7 +6,7 @@
 
 Summary:	Set of Python bindings for Trolltech's Qt application framework
 Name:		python-qt6
-Version:	6.6.0
+Version:	6.6.1
 Release:	1
 License:	GPLv2+
 Group:		Development/KDE and Qt
