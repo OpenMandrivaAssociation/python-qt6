@@ -10,7 +10,7 @@ Version:	6.7.1
 Release:	1
 License:	GPLv2+
 Group:		Development/KDE and Qt
-Url:		http://www.riverbankcomputing.co.uk/software/pyqt/intro
+Url:		https://www.riverbankcomputing.co.uk/software/pyqt/intro
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt6/PyQt6-%{version}.tar.gz
 Patch1:		pyqt6-workaround-qttest-detection.patch
 
