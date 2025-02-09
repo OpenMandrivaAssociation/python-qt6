@@ -6,12 +6,12 @@
 
 Summary:	Set of Python bindings for Trolltech's Qt application framework
 Name:		python-qt6
-Version:	6.8.0
+Version:	6.8.1
 Release:	1
 License:	GPLv2+
 Group:		Development/KDE and Qt
 Url:		https://www.riverbankcomputing.co.uk/software/pyqt/intro
-Source0:	https://files.pythonhosted.org/packages/source/P/PyQt6/PyQt6-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/P/PyQt6/pyqt6-%{version}.tar.gz
 Patch1:		pyqt6-workaround-qttest-detection.patch
 
 BuildRequires:	python-sip >= 5.1.0
@@ -60,6 +60,7 @@ BuildRequires:	cmake(Qt6QuickWidgets)
 BuildRequires:	cmake(Qt6Help)
 BuildRequires:	cmake(Qt6SerialPort)
 BuildRequires:	cmake(Qt6SpatialAudio)
+BuildRequires:	cmake(Qt6StateMachine)
 BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6SvgWidgets)
@@ -333,6 +334,19 @@ PyQt 6 sql.
 
 #------------------------------------------------------------
 
+%package statemachine
+Summary:	PyQt 6 State Machine
+Group:		Development/KDE and Qt
+Requires:	%{name}-core = %{EVRD}
+
+%description statemachine
+PyQt 6 State Machine
+
+%files statemachine
+%{py_platsitedir}/PyQt6/QtStateMachine.abi3.so
+
+#------------------------------------------------------------
+
 %package svg
 Summary:	PyQt 6 svg
 Group:		Development/KDE and Qt
@@ -538,7 +552,7 @@ PyQt 6 sensor interfaces
 %{py_platsitedir}/PyQt6/QtSensors.abi3.so
 
 %prep
-%autosetup -n PyQt6-%{version} -p1
+%autosetup -n pyqt6-%{version} -p1
 
 export QTDIR=%{_qtdir}
 export PATH=%{_qtdir}/bin:$PATH
