@@ -3,15 +3,20 @@
 %define major %(echo %{version} |cut -d. -f1-2)
 %define _debugsource_packages 0
 %global _debugsource_template %{nil}
+%define beta dev2503211311
 
 Summary:	Set of Python bindings for Trolltech's Qt application framework
 Name:		python-qt6
-Version:	6.8.1
-Release:	2
+Version:	6.9.0
+Release:	%{?beta:0.%{beta}.}1
 License:	GPLv2+
 Group:		Development/KDE and Qt
-Url:		https://www.riverbankcomputing.co.uk/software/pyqt/intro
+Url:		https://pypi.org/project/PyQt6/
+%if 0%{?beta:1}
+Source0:	https://riverbankcomputing.com/pypi/packages/PyQt6/pyqt6-%{version}.tar.gz
+%else
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt6/pyqt6-%{version}.tar.gz
+%endif
 Patch1:		pyqt6-workaround-qttest-detection.patch
 
 BuildRequires:	python-sip >= 5.1.0
