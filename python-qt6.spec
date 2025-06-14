@@ -3,11 +3,11 @@
 %define major %(echo %{version} |cut -d. -f1-2)
 %define _debugsource_packages 0
 %global _debugsource_template %{nil}
-%define beta dev2503211311
+#define beta dev2503211311
 
 Summary:	Set of Python bindings for Trolltech's Qt application framework
 Name:		python-qt6
-Version:	6.9.0
+Version:	6.9.1
 Release:	%{?beta:0.%{beta}.}1
 License:	GPLv2+
 Group:		Development/KDE and Qt
@@ -137,7 +137,7 @@ PyQt 6 core.
 %{py_platsitedir}/PyQt6/QtCore.abi3.so
 %{py_platsitedir}/PyQt6/__init__.py
 %{py_platsitedir}/PyQt6/bindings/QtCore/pyqt-gpl.sip5
-%{py_platsitedir}/PyQt6-*.dist-info
+%{py_platsitedir}/pyqt6-*.dist-info
 
 #------------------------------------------------------------
 
