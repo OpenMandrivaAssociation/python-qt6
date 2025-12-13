@@ -25,6 +25,7 @@ BuildRequires:	python-qt-builder
 BuildRequires:	qmake-qt6
 BuildRequires:	qt6-cmake
 BuildRequires:	glibc-devel
+BuildRequires:	make
 BuildRequires:	sed
 BuildRequires:	pkgconfig(dbus-python)
 BuildRequires:	pkgconfig(python3)
