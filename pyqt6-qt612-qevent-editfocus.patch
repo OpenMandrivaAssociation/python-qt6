@@ -1,0 +1,9 @@
+--- a/sip/QtCore/qcoreevent.sip
++++ b/sip/QtCore/qcoreevent.sip
+@@ -201,6 +201,4 @@
+         TabletTrackingChange,
+         GraphicsSceneLeave,
+-        EnterEditFocus,
+-        LeaveEditFocus,
+ %If (Qt_6_6_0 -)
+         DevicePixelRatioChange,

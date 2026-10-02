@@ -18,6 +18,8 @@ Source0:	https://riverbankcomputing.com/pypi/packages/PyQt6/pyqt6-%{version}.tar
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt6/pyqt6-%{version}.tar.gz
 %endif
 Patch1:		pyqt6-workaround-qttest-detection.patch
+# Qt 6.12 removed the keypad-navigation QEvent values.
+Patch2:		pyqt6-qt612-qevent-editfocus.patch
 
 BuildRequires:	python-sip >= 5.1.0
 BuildRequires:	python-sip-qt6
