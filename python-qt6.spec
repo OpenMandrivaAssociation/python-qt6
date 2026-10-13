@@ -139,7 +139,7 @@ PyQt 6 core.
 
 %files core
 %dir %{py_platsitedir}/PyQt6
-%{py_platsitedir}/PyQt6/QtCore.abi3.so
+%{py_platsitedir}/PyQt6/QtCore.abi3*.so
 %{py_platsitedir}/PyQt6/__init__.py
 %{py_platsitedir}/PyQt6/bindings/QtCore/pyqt-gpl.sip5
 %{py_platsitedir}/pyqt6-*.dist-info
@@ -156,8 +156,8 @@ Requires:	python%{pyver}dist(dbus-python)
 PyQt 6 dbus.
 
 %files dbus
-%{py_platsitedir}/PyQt6/QtDBus.abi3.so
-%{py_platsitedir}/dbus/mainloop/pyqt6.abi3.so
+%{py_platsitedir}/PyQt6/QtDBus.abi3*.so
+%{py_platsitedir}/dbus/mainloop/pyqt6.abi3*.so
 
 #------------------------------------------------------------
 
@@ -170,7 +170,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 designer.
 
 %files designer
-%{py_platsitedir}/PyQt6/QtDesigner.abi3.so
+%{py_platsitedir}/PyQt6/QtDesigner.abi3*.so
 
 #------------------------------------------------------------
 
@@ -183,7 +183,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 bluetooth.
 
 %files bluetooth
-%{py_platsitedir}/PyQt6/QtBluetooth.abi3.so
+%{py_platsitedir}/PyQt6/QtBluetooth.abi3*.so
 
 #------------------------------------------------------------
 
@@ -196,7 +196,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 gui.
 
 %files gui
-%{py_platsitedir}/PyQt6/QtGui.abi3.so
+%{py_platsitedir}/PyQt6/QtGui.abi3*.so
 
 #------------------------------------------------------------
 
@@ -209,7 +209,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 network.
 
 %files network
-%{py_platsitedir}/PyQt6/QtNetwork.abi3.so
+%{py_platsitedir}/PyQt6/QtNetwork.abi3*.so
 
 #------------------------------------------------------------
 
@@ -222,7 +222,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 multimedia.
 
 %files multimedia
-%{py_platsitedir}/PyQt6/QtMultimedia.abi3.so
+%{py_platsitedir}/PyQt6/QtMultimedia.abi3*.so
 
 #------------------------------------------------------------
 
@@ -235,8 +235,8 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 opengl.
 
 %files opengl
-%{py_platsitedir}/PyQt6/QtOpenGL.abi3.so
-%{py_platsitedir}/PyQt6/QtOpenGLWidgets.abi3.so
+%{py_platsitedir}/PyQt6/QtOpenGL.abi3*.so
+%{py_platsitedir}/PyQt6/QtOpenGLWidgets.abi3*.so
 
 #------------------------------------------------------------
 
@@ -249,7 +249,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 positioning.
 
 %files positioning
-%{py_platsitedir}/PyQt6/QtPositioning.abi3.so
+%{py_platsitedir}/PyQt6/QtPositioning.abi3*.so
 
 #------------------------------------------------------------
 
@@ -262,7 +262,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 printsupport
 
 %files printsupport
-%{py_platsitedir}/PyQt6/QtPrintSupport.abi3.so
+%{py_platsitedir}/PyQt6/QtPrintSupport.abi3*.so
 
 #------------------------------------------------------------
 
@@ -275,7 +275,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 qml.
 
 %files qml
-%{py_platsitedir}/PyQt6/QtQml.abi3.so
+%{py_platsitedir}/PyQt6/QtQml.abi3*.so
 
 #------------------------------------------------------------
 
@@ -288,8 +288,8 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 quick.
 
 %files quick
-%{py_platsitedir}/PyQt6/QtQuick.abi3.so
-%{py_platsitedir}/PyQt6/QtQuick3D.abi3.so
+%{py_platsitedir}/PyQt6/QtQuick.abi3*.so
+%{py_platsitedir}/PyQt6/QtQuick3D.abi3*.so
 
 #------------------------------------------------------------
 
@@ -302,7 +302,7 @@ Requires:	%{name}-quick = %{EVRD}
 PyQt 6 quickwidgets.
 
 %files quickwidgets
-%{py_platsitedir}/PyQt6/QtQuickWidgets.abi3.so
+%{py_platsitedir}/PyQt6/QtQuickWidgets.abi3*.so
 
 #------------------------------------------------------------
 
@@ -315,7 +315,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 serialport.
 
 %files serialport
-%{py_platsitedir}/PyQt6/QtSerialPort.abi3.so
+%{py_platsitedir}/PyQt6/QtSerialPort.abi3*.so
 
 #------------------------------------------------------------
 %package spatialaudio
@@ -327,7 +327,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 Spatial Audio module
 
 %files spatialaudio
-%{py_platsitedir}/PyQt6/QtSpatialAudio.abi3.so
+%{py_platsitedir}/PyQt6/QtSpatialAudio.abi3*.so
 
 #------------------------------------------------------------
 
@@ -340,7 +340,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 sql.
 
 %files sql
-%{py_platsitedir}/PyQt6/QtSql.abi3.so
+%{py_platsitedir}/PyQt6/QtSql.abi3*.so
 
 #------------------------------------------------------------
 
@@ -353,7 +353,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 State Machine
 
 %files statemachine
-%{py_platsitedir}/PyQt6/QtStateMachine.abi3.so
+%{py_platsitedir}/PyQt6/QtStateMachine.abi3*.so
 
 #------------------------------------------------------------
 
@@ -366,7 +366,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 svg.
 
 %files svg
-%{py_platsitedir}/PyQt6/QtSvg.abi3.so
+%{py_platsitedir}/PyQt6/QtSvg.abi3*.so
 
 #------------------------------------------------------------
 
@@ -379,7 +379,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 SVG widgets
 
 %files svg-widgets
-%{py_platsitedir}/PyQt6/QtSvgWidgets.abi3.so
+%{py_platsitedir}/PyQt6/QtSvgWidgets.abi3*.so
 
 #------------------------------------------------------------
 
@@ -392,7 +392,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 test.
 
 %files test
-%{py_platsitedir}/PyQt6/QtTest.abi3.so
+%{py_platsitedir}/PyQt6/QtTest.abi3*.so
 
 #------------------------------------------------------------
 %package texttospeech
@@ -404,7 +404,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 Text-to-Speech module
 
 %files texttospeech
-%{py_platsitedir}/PyQt6/QtTextToSpeech.abi3.so
+%{py_platsitedir}/PyQt6/QtTextToSpeech.abi3*.so
 
 #------------------------------------------------------------
 
@@ -417,7 +417,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 webchannel.
 
 %files webchannel
-%{py_platsitedir}/PyQt6/QtWebChannel.abi3.so
+%{py_platsitedir}/PyQt6/QtWebChannel.abi3*.so
 
 #------------------------------------------------------------
 
@@ -430,7 +430,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 websockets.
 
 %files websockets
-%{py_platsitedir}/PyQt6/QtWebSockets.abi3.so
+%{py_platsitedir}/PyQt6/QtWebSockets.abi3*.so
 
 
 #------------------------------------------------------------
@@ -444,7 +444,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 widgets.
 
 %files widgets
-%{py_platsitedir}/PyQt6/QtWidgets.abi3.so
+%{py_platsitedir}/PyQt6/QtWidgets.abi3*.so
 
 #------------------------------------------------------------
 
@@ -457,7 +457,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 xml.
 
 %files xml
-%{py_platsitedir}/PyQt6/QtXml.abi3.so
+%{py_platsitedir}/PyQt6/QtXml.abi3*.so
 
 #------------------------------------------------------------
 
@@ -492,7 +492,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 Help module
 
 %files help
-%{py_platsitedir}/PyQt6/QtHelp.abi3.so
+%{py_platsitedir}/PyQt6/QtHelp.abi3*.so
 
 #------------------------------------------------------------
 
@@ -506,7 +506,7 @@ Requires:	%{name}-multimedia = %{EVRD}
 PyQt 6 multimedia widgets
 
 %files multimediawidgets
-%{py_platsitedir}/PyQt6/QtMultimediaWidgets.abi3.so
+%{py_platsitedir}/PyQt6/QtMultimediaWidgets.abi3*.so
 
 #------------------------------------------------------------
 
@@ -519,7 +519,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 NFC
 
 %files nfc
-%{py_platsitedir}/PyQt6/QtNfc.abi3.so
+%{py_platsitedir}/PyQt6/QtNfc.abi3*.so
 
 #------------------------------------------------------------
 
@@ -532,8 +532,8 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 PDF
 
 %files pdf
-%{py_platsitedir}/PyQt6/QtPdf.abi3.so
-%{py_platsitedir}/PyQt6/QtPdfWidgets.abi3.so
+%{py_platsitedir}/PyQt6/QtPdf.abi3*.so
+%{py_platsitedir}/PyQt6/QtPdfWidgets.abi3*.so
 
 #------------------------------------------------------------
 
@@ -546,7 +546,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 Remote Objects
 
 %files remoteobjects
-%{py_platsitedir}/PyQt6/QtRemoteObjects.abi3.so
+%{py_platsitedir}/PyQt6/QtRemoteObjects.abi3*.so
 
 #------------------------------------------------------------
 
@@ -559,7 +559,7 @@ Requires:	%{name}-core = %{EVRD}
 PyQt 6 sensor interfaces
 
 %files sensors
-%{py_platsitedir}/PyQt6/QtSensors.abi3.so
+%{py_platsitedir}/PyQt6/QtSensors.abi3*.so
 
 %prep
 %autosetup -n pyqt6-%{version} -p1
