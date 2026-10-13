@@ -20,6 +20,8 @@ Source0:	https://files.pythonhosted.org/packages/source/P/PyQt6/pyqt6-%{version}
 Patch1:		pyqt6-workaround-qttest-detection.patch
 # Qt 6.12 removed the keypad-navigation QEvent values.
 Patch2:		pyqt6-qt612-qevent-editfocus.patch
+# Python 3.15 removed PyWeakref_GetObject from the headers.
+Patch3:		pyqt6-6.10.1-python315-weakref.patch
 
 BuildRequires:	python%{pyver}dist(sip) >= 6.5
 BuildRequires:	python-sip-qt6

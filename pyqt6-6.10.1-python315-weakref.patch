@@ -1,0 +1,15 @@
+--- a/qpy/QtCore/qpycore_pyqtslot.cpp
++++ b/qpy/QtCore/qpycore_pyqtslot.cpp
+@@ -19,6 +19,12 @@
+ 
+ 
+ #include <Python.h>
++
++// Removed from the Python 3.15 headers. Still exported for the stable ABI,
++// which this file is built against (Py_LIMITED_API).
++#if PY_VERSION_HEX >= 0x030f0000
++extern "C" PyObject *PyWeakref_GetObject(PyObject *ref);
++#endif
+ 
+ #include "qpycore_chimera.h"
+ #include "qpycore_pyqtslot.h"
