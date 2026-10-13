@@ -8,7 +8,7 @@
 Summary:	Set of Python bindings for Trolltech's Qt application framework
 Name:		python-qt6
 Version:	6.10.1
-Release:	%{?beta:0.%{beta}.}2
+Release:	%{?beta:0.%{beta}.}3
 License:	GPLv2+
 Group:		Development/KDE and Qt
 Url:		https://pypi.org/project/PyQt6/
@@ -21,9 +21,9 @@ Patch1:		pyqt6-workaround-qttest-detection.patch
 # Qt 6.12 removed the keypad-navigation QEvent values.
 Patch2:		pyqt6-qt612-qevent-editfocus.patch
 
-BuildRequires:	python-sip >= 5.1.0
+BuildRequires:	python%{pyver}dist(sip) >= 6.5
 BuildRequires:	python-sip-qt6
-BuildRequires:	python-qt-builder
+BuildRequires:	python%{pyver}dist(pyqt-builder) >= 1.20
 BuildRequires:	qmake-qt6
 BuildRequires:	qt6-cmake
 BuildRequires:	glibc-devel
@@ -148,7 +148,7 @@ PyQt 6 core.
 Summary:	PyQt 6 dbus
 Group:		Development/KDE and Qt
 Requires:	%{name}-core = %{EVRD}
-Requires:	python3dist(dbus-python)
+Requires:	python%{pyver}dist(dbus-python)
 
 %description dbus
 PyQt 6 dbus.
